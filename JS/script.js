@@ -1,6 +1,6 @@
 `use strict`;
 
-
+const button = document.querySelector('button');
 
 
 /* 
@@ -17,3 +17,5 @@ function General {
 }
 
 */
+
+button.addEventListener("click", function(){ alert('Good')});
