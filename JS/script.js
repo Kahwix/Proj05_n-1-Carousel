@@ -1,38 +1,37 @@
 `use strict`;
 
-const button = document.querySelector('button');
-const groupeli = document.querySelectorAll('li');
-let table = new Array();
+const buttonB = document.getElementById('Before');
+const buttonA = document.getElementById('After');
+let AllImages = document.querySelectorAll('li img');
 
-
-function TableIndex() {
-
+function NextImageComming() {
+    for(let i of AllImages){
+        i.classList.remove('visible');
+        i.className.add('visible');
+    }
 }
-
-function BoucleClassVisible() {
-
-}
-
-function ButtonNextImage() {
-
-}
-
 
 /* 
 function BoucleAuto(){
 
-    setTimeout(function(){
-        
-        BoucleAuto();
-    }, 5000);
+    setTimeout(function(){ // on utilise une fonction anonyme
+						
+        if(i < indexImg){ // si le compteur est inférieur au dernier index
+	    i++; // on l'incrémente
+	}
+	else{ // sinon, on le remet à 0 (première image)
+	    i = 0;
+	}, 5000);
 
 }
-function General {
-    BoucleAuto(); 
-}
-
 */
 
-button.addEventListener("click", function(){ alert('Good')});
-button.addEventListener("click", () => alert('Good'));
-button.addEventListener("click", BoucleClassVisible);
+
+function GeneralButton(){
+    NextImageComming();
+}
+
+
+buttonA.addEventListener("click", NextImageComming);
+// groupeli.addEventListener("click", () => alert('Good')); */
+// button.addEventListener("click", NextImageComming);
