@@ -35,11 +35,6 @@ function NextImageSlice() {
 */
 
 
-function GeneralButton(){
-    NextImageComming();
-}
-
-
 buttonBack.addEventListener("click", BackImageSlice);
 buttonNext.addEventListener("click", NextImageSlice);
 // groupeli.addEventListener("click", () => alert('Good')); */
