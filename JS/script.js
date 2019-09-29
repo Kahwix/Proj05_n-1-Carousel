@@ -22,17 +22,7 @@ function NextImageSlice() {
      li[i].classList.add('visible');
 }
 
-
-/* 
-    setTimeout(function(){    // On utilise une fonction anonyme
-						
-        if(i < li.length){ // Si le compteur est inférieur au dernier index
-	    i++; // On l'incrémente
-	}
-	else{ // Sinon, on le remet à 0 (première image)
-	    i = 0;
-	}, 5000);
-*/
+setInterval(NextImageSlice, 2000);
 
 
 buttonBack.addEventListener("click", BackImageSlice);
