@@ -3,12 +3,16 @@ html {
     padding: 0;
 }
 
-img {
+li {
     display: none;
+    text-align: center;
+}
+
+img {
+    width: 30rem;
+    height: 35rem;
 }
 
 .visible {
     display: block;
-    width: 30rem;
-    height: 35rem;
 }
