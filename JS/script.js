@@ -1,29 +1,37 @@
 `use strict`;
 
-const buttonB = document.getElementById('Before');
-const buttonA = document.getElementById('After');
-let AllImages = document.querySelectorAll('li img');
+const buttonBack = document.querySelector('#Back');
+const buttonNext = document.querySelector('#Next');
+let li = document.querySelectorAll('li');
+let i = 0;
 
-function NextImageComming() {
-    for(let i of AllImages){
-        i.classList.remove('visible');
-        i.className.add('visible');
-    }
+
+function BackImageSlice() {
+    li[i].classList.remove('visible'); i--;
+    if (i < 0) {
+        i = li.length-1;
+       }
+     li[i].classList.add('visible');
 }
+
+function NextImageSlice() {
+    li[i].classList.remove('visible'); i++;
+    if (i >= li.length) {
+        i = 0;
+       }
+     li[i].classList.add('visible');
+}
+
 
 /* 
-function BoucleAuto(){
-
-    setTimeout(function(){ // on utilise une fonction anonyme
+    setTimeout(function(){    // On utilise une fonction anonyme
 						
-        if(i < indexImg){ // si le compteur est inférieur au dernier index
-	    i++; // on l'incrémente
+        if(i < li.length){ // Si le compteur est inférieur au dernier index
+	    i++; // On l'incrémente
 	}
-	else{ // sinon, on le remet à 0 (première image)
+	else{ // Sinon, on le remet à 0 (première image)
 	    i = 0;
 	}, 5000);
-
-}
 */
 
 
@@ -32,6 +40,7 @@ function GeneralButton(){
 }
 
 
-buttonA.addEventListener("click", NextImageComming);
+buttonBack.addEventListener("click", BackImageSlice);
+buttonNext.addEventListener("click", NextImageSlice);
 // groupeli.addEventListener("click", () => alert('Good')); */
 // button.addEventListener("click", NextImageComming);
