@@ -23,7 +23,7 @@ function NextImageSlice() {
 	li[i].classList.add("visible");
 }
 
-setInterval(NextImageSlice, 0);
+setInterval(NextImageSlice, 2000);
 
 buttonBack.addEventListener("click", BackImageSlice);
 buttonNext.addEventListener("click", NextImageSlice);
